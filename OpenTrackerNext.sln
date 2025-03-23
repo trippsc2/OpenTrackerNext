@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Roslyn.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Roslyn.Document", "roslyn\OpenTrackerNext.Roslyn.Document\OpenTrackerNext.Roslyn.Document.csproj", "{695BC8CE-C645-42CC-B77B-625C4A107170}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Editor", "src\OpenTrackerNext.Editor\OpenTrackerNext.Editor.csproj", "{A13C5BF9-EE91-4BC7-833F-6B51D57C479B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Editor.UnitTests", "tests\unit\OpenTrackerNext.Editor.UnitTests\OpenTrackerNext.Editor.UnitTests.csproj", "{1C76851A-4DB7-405D-842A-13667B6F5C15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,8 @@ Global
 		{8CCAE35E-F649-4E44-BD78-1201D0937B43} = {AACFD2CC-CC27-47C5-BE03-40EF87404E61}
 		{5B294F6D-DE45-4879-BF6D-52F6C99CBFEE} = {1FFAC02B-280D-4A3F-B1E4-B4532F990F47}
 		{695BC8CE-C645-42CC-B77B-625C4A107170} = {AACFD2CC-CC27-47C5-BE03-40EF87404E61}
+		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B} = {89B36CCF-3070-4AC1-B23C-78150CD143D4}
+		{1C76851A-4DB7-405D-842A-13667B6F5C15} = {1FFAC02B-280D-4A3F-B1E4-B4532F990F47}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{33840BD1-60D5-49DB-B3A6-FF6061FA139C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -59,5 +65,13 @@ Global
 		{695BC8CE-C645-42CC-B77B-625C4A107170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{695BC8CE-C645-42CC-B77B-625C4A107170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{695BC8CE-C645-42CC-B77B-625C4A107170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

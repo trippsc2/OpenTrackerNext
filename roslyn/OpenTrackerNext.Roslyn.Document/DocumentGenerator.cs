@@ -114,7 +114,7 @@ public sealed class DocumentGenerator : IIncrementalGenerator
 
         var provider = context.SyntaxProvider
             .ForAttributeWithMetadataName(
-                $"OpenTrackerNext.Document.DocumentAttribute",
+                "OpenTrackerNext.Document.DocumentAttribute",
                 (node, _) => CouldBeMarkedClass(node),
                 TransformMarkedClass)
             .Where(x => x is not null)
@@ -600,13 +600,13 @@ public sealed class DocumentGenerator : IIncrementalGenerator
 
     private static string ConvertClassNameToConstructorName(string className)
     {
-        if (className.Contains('<'))
+        if (!className.Contains('<'))
         {
-            var index = className.IndexOf('<');
-            return className[..index];
+            return className;
         }
-        
-        return className;
+
+        var index = className.IndexOf('<');
+        return className[..index];
     }
 
     private static string GenerateConstructorStatements(DocumentTypeInfo typeInfo)

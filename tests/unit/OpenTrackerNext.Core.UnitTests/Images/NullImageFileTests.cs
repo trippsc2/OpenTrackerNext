@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Avalonia;
 using FluentAssertions;
 using OpenTrackerNext.Core.Images;
@@ -10,6 +11,13 @@ namespace OpenTrackerNext.Core.UnitTests.Images;
 [ExcludeFromCodeCoverage]
 public sealed class NullImageFileTests
 {
+    private readonly AvaloniaFixture _avaloniaFixture;
+
+    public NullImageFileTests(AvaloniaFixture avaloniaFixture)
+    {
+        _avaloniaFixture = avaloniaFixture;
+    }
+    
     [Fact]
     public void Id_ShouldReturnExpected()
     {
@@ -46,13 +54,18 @@ public sealed class NullImageFileTests
             .Throw<NotSupportedException>();
     }
 
-    // [Fact]
-    // public void GetBitmap_ShouldReturnEmptyBitmap()
-    // {
-    //     NullImageFile.Instance
-    //         .GetBitmap()
-    //         .Size
-    //         .Should()
-    //         .BeEquivalentTo(new Size(1, 1));
-    // }
+    [Fact]
+    public async Task GetBitmap_ShouldReturnEmptyBitmap()
+    {
+        await _avaloniaFixture.Session.Dispatch(
+            () =>
+            {
+                NullImageFile.Instance
+                    .GetBitmap()
+                    .Size
+                    .Should()
+                    .BeEquivalentTo(new Size(1, 1));
+            },
+            TestContext.Current.CancellationToken);
+    }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Threading.Tasks;
 using Avalonia;
 using FluentAssertions;
 using NSubstitute;
@@ -15,13 +16,15 @@ namespace OpenTrackerNext.Core.UnitTests.Images;
 [ExcludeFromCodeCoverage]
 public sealed class ImageFileTests
 {
+    private readonly AvaloniaFixture _avaloniaFixture;
     private readonly string _fileName = Guid.NewGuid().ToLowercaseString();
     private readonly IStorageFile _file;
 
     private readonly ImageFile _subject;
 
-    public ImageFileTests()
+    public ImageFileTests(AvaloniaFixture avaloniaFixture)
     {
+        _avaloniaFixture = avaloniaFixture;
         _file = Substitute.For<IStorageFile>();
         _file.Name.Returns(_fileName);
         
@@ -74,19 +77,24 @@ public sealed class ImageFileTests
         _file.Received(1).Delete();
     }
 
-    // [Fact]
-    // public void GetBitmap_ShouldReturnExpectedBitmap()
-    // {
-    //     var stream = new MemoryStream();
-    //     
-    //     _file.OpenRead().Returns(stream);
-    //
-    //     var bitmap = _subject.GetBitmap();
-    //     
-    //     bitmap.Size
-    //         .Should()
-    //         .BeEquivalentTo(new Size(1, 1));
-    // }
+    [Fact]
+    public async Task GetBitmap_ShouldReturnExpectedBitmap()
+    {
+        var stream = new MemoryStream();
+        
+        _file.OpenRead().Returns(stream);
+        
+        await _avaloniaFixture.Session.Dispatch(
+            () =>
+            {
+                var bitmap = _subject.GetBitmap();
+                
+                bitmap.Size
+                    .Should()
+                    .BeEquivalentTo(new Size(1, 1));
+            },
+            TestContext.Current.CancellationToken);
+    }
 
     [Fact]
     public void SplatResolve_ShouldResolveInterfaceFactory()

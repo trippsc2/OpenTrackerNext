@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="src/OpenTrackerNext.Editor/App.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="src/OpenTrackerNext.Editor/Views/MainWindow.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="tests/unit/OpenTrackerNext.Core.UnitTests/App.axaml" value="tests/unit/OpenTrackerNext.Core.UnitTests/OpenTrackerNext.Core.UnitTests.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
