@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Editor.ViewModels.Tools"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OpenTrackerNext.Editor.Views.Tools.ImagesToolView"
+             x:DataType="vm:ImagesToolViewModel">
+  
+  <Panel Classes="ToolListBoxPanel">
+    <DockPanel>
+      
+      <StackPanel Classes="ToolButtonsStackPanel" DockPanel.Dock="Top">
+        <Button x:Name="AddButton"
+                Classes="ToolButton"
+                i:Attached.Icon="mdi-plus-thick"
+                ToolTip.Tip="Add..." />
+        <Button x:Name="RenameButton"
+                Classes="ToolButton"
+                i:Attached.Icon="mdi-rename"
+                ToolTip.Tip="Rename..." />
+        <Button x:Name="DeleteButton"
+                Classes="ToolButton"
+                i:Attached.Icon="mdi-delete"
+                ToolTip.Tip="Delete..." />
+      </StackPanel>
+      
+      <ListBox x:Name="ListBox" Classes="ToolListBox" />
+    
+    </DockPanel>
+  </Panel>
+  
+</UserControl>

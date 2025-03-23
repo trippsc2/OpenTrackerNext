@@ -1,0 +1,14 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Style Selector="StackPanel.VerticalStackPanel">
+    <Setter Property="Orientation" Value="Vertical" />
+  </Style>
+  
+  <Style Selector="Label.EditorLabel">
+    <Setter Property="Margin" Value="2 6 15 2" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+  </Style>
+  
+</Styles>

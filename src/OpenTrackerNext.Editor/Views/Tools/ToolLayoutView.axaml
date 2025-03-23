@@ -1,0 +1,62 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Editor.ViewModels.Tools"
+             xmlns:controls="clr-namespace:OpenTrackerNext.Editor.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OpenTrackerNext.Editor.Views.Tools.ToolLayoutView"
+             x:DataType="vm:ToolLayoutViewModel" x:CompileBindings="True">
+  <Panel>
+    <Grid ColumnDefinitions="Auto * Auto 3* Auto * Auto">
+      <Panel Grid.Column="0">
+        <ContentControl x:Name="TopLeftToolBarContentControl" />
+        <ContentControl x:Name="BottomLeftToolBarContentControl" />
+      </Panel>
+      
+      <Panel Grid.Column="1">
+        <ContentControl x:Name="LeftToolPaneContentControl" />
+      </Panel>
+      
+      <GridSplitter x:Name="LeftGridSplitter" Grid.Column="2" />
+      
+      <Panel Grid.Column="3" x:Name="CenterContentPanel">
+        <ContentControl x:Name="CenterContentControl" />
+      </Panel>
+      
+      <GridSplitter x:Name="RightGridSplitter" Grid.Column="4" />
+      
+      <Panel Grid.Column="5">
+        <ContentControl x:Name="RightToolPaneContentControl" />
+      </Panel>
+      
+      <Panel Grid.Column="6">
+        <ContentControl x:Name="TopRightToolBarContentControl" />
+        <ContentControl x:Name="BottomRightToolBarContentControl" />
+      </Panel>
+    </Grid>
+    
+    <Grid ColumnDefinitions="200 * 200" RowDefinitions="* *">
+      <controls:HitBoxControl x:Name="TopLeftHitBoxControl"
+                              DragDrop.AllowDrop="True"
+                              Grid.Column="0"
+                              Grid.Row="0"
+                              Background="Transparent" />
+      <controls:HitBoxControl x:Name="TopRightHitBoxControl"
+                              DragDrop.AllowDrop="True"
+                              Grid.Column="2"
+                              Grid.Row="0"
+                              Background="Transparent" />
+      <controls:HitBoxControl x:Name="BottomLeftHitBoxControl"
+                              DragDrop.AllowDrop="True"
+                              Grid.Column="0"
+                              Grid.Row="1"
+                              Background="Transparent" />
+      <controls:HitBoxControl x:Name="BottomRightHitBoxControl"
+                              DragDrop.AllowDrop="True"
+                              Grid.Column="2"
+                              Grid.Row="1"
+                              Background="Transparent" />
+    </Grid>
+  </Panel>
+</UserControl>

@@ -29,6 +29,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\roslyn\OpenTrackerNext.Roslyn.Document\OpenTrackerNext.Roslyn.Document.csproj" />
+    <ProjectReference Include="..\..\..\roslyn\OpenTrackerNext.Roslyn.Factories\OpenTrackerNext.Roslyn.Factories.csproj" />
+    <ProjectReference Include="..\..\..\roslyn\OpenTrackerNext.Roslyn.ServiceCollection\OpenTrackerNext.Roslyn.ServiceCollection.csproj" />
     <ProjectReference Include="..\..\..\roslyn\OpenTrackerNext.Roslyn.SplatRegistration\OpenTrackerNext.Roslyn.SplatRegistration.csproj" />
   </ItemGroup>
 

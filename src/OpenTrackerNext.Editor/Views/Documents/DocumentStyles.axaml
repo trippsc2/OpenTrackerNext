@@ -1,0 +1,55 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Style Selector="Border.DocumentBorder">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemChromeLowColor}" />
+    <Setter Property="BorderThickness" Value="2" />
+    <Setter Property="Focusable" Value="True" />
+    <Setter Property="Padding" Value="1" />
+  </Style>
+  
+  <Style Selector="Border.DocumentBorder:focus-within">
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark2}" />
+  </Style>
+  
+  <Style Selector="Button.DocumentClose">
+    <Setter Property="FontSize" Value="10" />
+    <Setter Property="Padding" Value="2" />
+  </Style>
+  
+  <Style Selector="Button.EditorButton">
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="MinHeight" Value="24" />
+    <Setter Property="MinWidth" Value="65" />
+    <Setter Property="Padding" Value="3" />
+  </Style>
+  
+  <Style Selector="Label.DocumentTabLabel > ContentPresenter">
+    <Setter Property="RecognizesAccessKey" Value="False" />
+  </Style>
+  
+  <Style Selector="StackPanel.EditorButtonsStackPanel">
+    <Setter Property="Margin" Value="0 5" />
+    <Setter Property="HorizontalAlignment" Value="Right" />
+    <Setter Property="Orientation" Value="Horizontal" />
+    <Setter Property="Spacing" Value="5" />
+  </Style>
+
+  <Style Selector="StackPanel.EditorStackPanel">
+    <Setter Property="Margin" Value="10" />
+    <Setter Property="Orientation" Value="Vertical" />
+  </Style>
+  
+  <Style Selector="TabControl.DocumentTabControl">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+  
+  <Style Selector="TabControl.DocumentTabControl > TabItem">
+    <Setter Property="Background" Value="{DynamicResource SystemChromeMediumColor}" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="MinHeight" Value="36" />
+  </Style>
+  
+</Styles>

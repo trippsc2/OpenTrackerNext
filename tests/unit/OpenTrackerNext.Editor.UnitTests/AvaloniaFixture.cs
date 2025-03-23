@@ -17,7 +17,7 @@ public sealed class AvaloniaFixture : IDisposable
     {
         IconProvider.Current.Register<MaterialDesignIconProvider>();
 
-        Session = HeadlessUnitTestSession.StartNew(typeof(App));
+        Session = HeadlessUnitTestSession.StartNew(typeof(TestAppBuilder));
     }
 
     public HeadlessUnitTestSession Session { get; }

@@ -3,18 +3,42 @@
         xmlns:vm="using:OpenTrackerNext.Editor.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dh="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+        xmlns:menu="clr-namespace:OpenTrackerNext.Core.ViewModels.Menus;assembly=OpenTrackerNext.Core"
+        xmlns:i="https://github.com/projektanker/icons.avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="OpenTrackerNext.Editor.Views.MainWindow"
         x:DataType="vm:MainViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="OpenTrackerNext.Editor">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        WindowStartupLocation="CenterScreen">
+  
+  <Window.KeyBindings>
+    <KeyBinding Gesture="Ctrl+N" Command="{Binding NewCommand}" />
+    <KeyBinding Gesture="Ctrl+O" Command="{Binding OpenCommand}" />
+    <KeyBinding Gesture="Ctrl+Z" Command="{Binding UndoCommand}" />
+    <KeyBinding Gesture="Ctrl+Y" Command="{Binding RedoCommand}" />
+  </Window.KeyBindings>
+  
+  <dh:DialogHost x:Name="MainDialogHost" Identifier="MainDialogHost">
+    <DockPanel>
+      
+      <Menu x:Name="TopMenu" DockPanel.Dock="Top">
+        <Menu.Styles>
+          <Style x:DataType="menu:MenuItemViewModel" Selector="MenuItem">
+            <Setter Property="i:MenuItem.Icon" Value="{Binding Icon}" />
+            <Setter Property="Header" Value="{Binding Header}" />
+            <Setter Property="Command" Value="{Binding Command}" />
+            <Setter Property="InputGesture" Value="{Binding InputGestureText}" />
+            <Setter Property="ItemsSource" Value="{Binding Children}" />
+            <Setter Property="HeaderTemplate" Value="{x:Null}" />
+          </Style>
+        </Menu.Styles>
+      </Menu>
+      
+      <Panel>
+        <ContentControl x:Name="ContentControl" />
+      </Panel>
+      
+    </DockPanel>
+  </dh:DialogHost>
+  
 </Window>

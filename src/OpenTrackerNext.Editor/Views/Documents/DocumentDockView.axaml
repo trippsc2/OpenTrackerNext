@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Editor.ViewModels.Documents"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OpenTrackerNext.Editor.Views.Documents.DocumentDockView"
+             x:DataType="vm:DocumentDockViewModel">
+  <Panel>
+    <TabControl x:Name="TabControl"
+                Classes="DocumentTabControl"
+                SelectedItem="{Binding ActiveDocument}">
+      <TabControl.ItemTemplate>
+        <DataTemplate DataType="vm:DocumentViewModel">
+          <Grid ColumnDefinitions="Auto * Auto">
+            <Label Classes="DocumentTabLabel"
+                   Grid.Column="0"
+                   Content="{Binding Document.Title}" />
+            <Button Classes="DocumentClose"
+                    Grid.Column="2"
+                    i:Attached.Icon="mdi-window-close"
+                    Command="{Binding CloseCommand}" />
+          </Grid>
+        </DataTemplate>
+      </TabControl.ItemTemplate>
+    </TabControl>
+  </Panel>
+</UserControl>

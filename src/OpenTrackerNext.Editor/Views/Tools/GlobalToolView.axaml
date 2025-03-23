@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             xmlns:tools="clr-namespace:OpenTrackerNext.Editor.ViewModels.Tools"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OpenTrackerNext.Editor.Views.Tools.GlobalToolView"
+             x:DataType="tools:GlobalToolViewModel">
+  
+  <Panel Classes="ToolListBoxPanel">
+    <DockPanel>
+      
+      <StackPanel Classes="ToolButtonsStackPanel" DockPanel.Dock="Top">
+        <Button x:Name="OpenButton"
+                Classes="ToolButton"
+                i:Attached.Icon="mdi-folder-open"
+                ToolTip.Tip="Open" />
+      </StackPanel>
+      
+      <ListBox x:Name="ListBox" Classes="ToolListBox" />
+      
+    </DockPanel>
+  </Panel>
+  
+</UserControl>

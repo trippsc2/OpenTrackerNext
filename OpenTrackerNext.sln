@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Editor", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Editor.UnitTests", "tests\unit\OpenTrackerNext.Editor.UnitTests\OpenTrackerNext.Editor.UnitTests.csproj", "{1C76851A-4DB7-405D-842A-13667B6F5C15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Roslyn.ServiceCollection", "roslyn\OpenTrackerNext.Roslyn.ServiceCollection\OpenTrackerNext.Roslyn.ServiceCollection.csproj", "{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrackerNext.Roslyn.Factories", "roslyn\OpenTrackerNext.Roslyn.Factories\OpenTrackerNext.Roslyn.Factories.csproj", "{6A2683E6-2E04-4447-93AA-AB3231E83111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,8 @@ Global
 		{695BC8CE-C645-42CC-B77B-625C4A107170} = {AACFD2CC-CC27-47C5-BE03-40EF87404E61}
 		{A13C5BF9-EE91-4BC7-833F-6B51D57C479B} = {89B36CCF-3070-4AC1-B23C-78150CD143D4}
 		{1C76851A-4DB7-405D-842A-13667B6F5C15} = {1FFAC02B-280D-4A3F-B1E4-B4532F990F47}
+		{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B} = {AACFD2CC-CC27-47C5-BE03-40EF87404E61}
+		{6A2683E6-2E04-4447-93AA-AB3231E83111} = {AACFD2CC-CC27-47C5-BE03-40EF87404E61}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{33840BD1-60D5-49DB-B3A6-FF6061FA139C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -73,5 +79,13 @@ Global
 		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C76851A-4DB7-405D-842A-13667B6F5C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6BE9B7-D177-4F39-9C5A-E361F20FEA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2683E6-2E04-4447-93AA-AB3231E83111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2683E6-2E04-4447-93AA-AB3231E83111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2683E6-2E04-4447-93AA-AB3231E83111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2683E6-2E04-4447-93AA-AB3231E83111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,9 @@
       <map>
         <entry key="src/OpenTrackerNext.Editor/App.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
         <entry key="src/OpenTrackerNext.Editor/Views/MainWindow.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="src/OpenTrackerNext.Editor/Views/Tools/ToolLayoutView.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
         <entry key="tests/unit/OpenTrackerNext.Core.UnitTests/App.axaml" value="tests/unit/OpenTrackerNext.Core.UnitTests/OpenTrackerNext.Core.UnitTests.csproj" />
+        <entry key="tests/unit/OpenTrackerNext.Editor.UnitTests/App.axaml" value="tests/unit/OpenTrackerNext.Editor.UnitTests/OpenTrackerNext.Editor.UnitTests.csproj" />
       </map>
     </option>
   </component>

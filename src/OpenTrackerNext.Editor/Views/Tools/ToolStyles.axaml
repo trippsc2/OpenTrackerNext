@@ -1,0 +1,88 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Style Selector="Border.ToolBorder">
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemChromeLowColor}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+  
+  <Style Selector="Border.ToolBorder:focus-within">
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark2}" />
+  </Style>
+  
+  <Style Selector="Border.ToolTitleBorder">
+    <Setter Property="Background" Value="{DynamicResource SystemChromeLowColor}" />
+    <Setter Property="Focusable" Value="True" />
+  </Style>
+  
+  <Style Selector="Button.ToolCloseButton">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Padding" Value="2" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  
+  <Style Selector="Button.ToolButton">
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="Margin" Value="0" />
+    <Setter Property="Padding" Value="2" />
+  </Style>
+  
+  <Style Selector="ContextMenu.ListBoxItemContextMenu:empty">
+    <Setter Property="IsVisible" Value="False" />
+  </Style>
+  
+  <Style Selector="Grid.ToolTitleGrid">
+    <Setter Property="Margin" Value="4 2" />
+  </Style>
+  
+  <Style Selector="Label.ListBoxItemLabel">
+    <Setter Property="Margin" Value="8 5" />
+  </Style>
+    
+  <Style Selector="Label.ListBoxItemLabel > ContentPresenter">
+    <Setter Property="RecognizesAccessKey" Value="False" />
+  </Style>
+  
+  <Style Selector="ListBox.ToolListBox">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+  
+  <Style Selector="ListBox.ToolListBox > ListBoxItem">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+  
+  <Style Selector="Panel.ListBoxItemPanel">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+  </Style>
+  
+  <Style Selector="Panel.ToolContentPanel">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Focusable" Value="True" />
+    <Setter Property="Margin" Value="2" />
+  </Style>
+  
+  <Style Selector="Panel.ToolListBoxPanel">
+    <Setter Property="Margin" Value="1" />
+  </Style>
+  
+  <Style Selector="StackPanel.ToolButtonToolTipStackPanel">
+    <Setter Property="Orientation" Value="Vertical" />
+    <Setter Property="Spacing" Value="5" />
+  </Style>
+  
+  <Style Selector="StackPanel.ToolButtonsStackPanel">
+    <Setter Property="Margin" Value="0 0 0 1" />
+    <Setter Property="Orientation" Value="Horizontal" />
+    <Setter Property="Spacing" Value="1" />
+  </Style>
+  
+  <Style Selector="ToggleButton.ToolToggleButton">
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="Padding" Value="12 2" />
+  </Style>
+  
+</Styles>
