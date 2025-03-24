@@ -1,0 +1,156 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
+        xmlns:images="clr-namespace:OpenTrackerNext.Core.Images;assembly=OpenTrackerNext.Core"
+        xmlns:i="https://github.com/projektanker/icons.avalonia"
+        xmlns:documents="clr-namespace:OpenTrackerNext.Core.Documents;assembly=OpenTrackerNext.Core"
+        xmlns:utils="clr-namespace:OpenTrackerNext.Core.Utils;assembly=OpenTrackerNext.Core">
+  
+  <Style Selector="Button.EditorCollectionButton">
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="Margin" Value="2" />
+    <Setter Property="MinHeight" Value="24" />
+    <Setter Property="MinWidth" Value="65" />
+    <Setter Property="Padding" Value="3" />
+  </Style>
+  
+  <Style Selector="Button.SelectorAddButton">
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="Margin" Value="0 6 0 2" />
+    <Setter Property="Padding" Value="2" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="i:Attached.Icon" Value="mdi-plus-thick" />
+    <Setter Property="ToolTip.Tip" Value="Add..." />
+  </Style>
+  
+  <Style Selector="Button.SelectorOpenButton">
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="Margin" Value="0 6 0 2" />
+    <Setter Property="Padding" Value="2" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="i:Attached.Icon" Value="mdi-folder-open" />
+    <Setter Property="ToolTip.Tip" Value="Open..." />
+  </Style>
+  
+  <Style Selector="Button.SelectorRenameButton">
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="Margin" Value="0 6 0 2" />
+    <Setter Property="Padding" Value="2" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="i:Attached.Icon" Value="mdi-rename" />
+    <Setter Property="ToolTip.Tip" Value="Rename..." />
+  </Style>
+  
+  <Style Selector="CheckBox.EditorCheckBox">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Margin" Value="2 0" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  
+  <Style Selector="ComboBox.FileComboBox">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="IsTextSearchEnabled" Value="True" />
+    <Setter Property="Margin" Value="2" />
+    
+    <Setter Property="ItemTemplate">
+      <Setter.Value>
+        <DataTemplate x:DataType="documents:IDocumentFile">
+          <TextBlock Text="{Binding FriendlyId}" />
+        </DataTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  
+  <Style x:DataType="documents:IDocumentFile" Selector="ComboBox.FileComboBox > ComboBoxItem">
+    <Setter Property="TextSearch.Text" Value="{Binding FriendlyId}" />
+  </Style>
+  
+  <Style Selector="ComboBox.ImageComboBox">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="IsTextSearchEnabled" Value="True" />
+    <Setter Property="Margin" Value="2" />
+    
+    <Setter Property="ItemTemplate">
+      <Setter.Value>
+        <DataTemplate x:DataType="images:IImageFile">
+          <TextBlock Text="{Binding FriendlyId}" />
+        </DataTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  
+  <Style x:DataType="images:IImageFile" Selector="ComboBox.ImageComboBox > ComboBoxItem">
+    <Setter Property="TextSearch.Text" Value="{Binding FriendlyId}" />
+  </Style>
+  
+  <Style Selector="ComboBox.StringComboBox">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="IsTextSearchEnabled" Value="True" />
+    <Setter Property="Margin" Value="2" />
+    
+    <Setter Property="ItemTemplate">
+      <Setter.Value>
+        <DataTemplate x:DataType="system:String">
+          <TextBlock Text="{Binding}" />
+        </DataTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  
+  <Style Selector="ComboBox.SmartEnumComboBox">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="IsTextSearchEnabled" Value="True" />
+    <Setter Property="Margin" Value="2" />
+    
+    <Setter Property="ItemTemplate">
+      <Setter.Value>
+        <DataTemplate x:DataType="utils:INamedSmartEnum">
+          <TextBlock Text="{Binding DisplayName}" />
+        </DataTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  
+  <Style x:DataType="utils:INamedSmartEnum" Selector="ComboBox.SmartEnumComboBox > ComboBoxItem">
+    <Setter Property="TextSearch.Text" Value="{Binding DisplayName}" />
+  </Style>
+  
+  <Style x:DataType="system:String" Selector="ComboBox.StringComboBox > ComboBoxItem">
+    <Setter Property="TextSearch.Text" Value="{Binding}" />
+  </Style>
+  
+  <Style Selector="Expander.EditorExpander">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="IsExpanded" Value="True" />
+    <Setter Property="Margin" Value="2" />
+    <Setter Property="Padding" Value="8" />
+  </Style>
+  
+  <Style Selector="Expander.EditorExpander /template/ ToggleButton#ExpanderHeader">
+    <Setter Property="Padding" Value="10 0 0 0" />
+  </Style>
+  
+  <Style Selector="Image.PreviewImage">
+    <Setter Property="Stretch" Value="Uniform" />
+    <Setter Property="StretchDirection" Value="DownOnly" />
+  </Style>
+  
+  <Style Selector="NumericUpDown.EditorNumericUpDown">
+    <Setter Property="Increment" Value="1" />
+    <Setter Property="Margin" Value="2" />
+    <Setter Property="Maximum" Value="999" />
+    <Setter Property="Minimum" Value="-999" />
+  </Style>
+  
+  <Style Selector="NumericUpDown.EditorVersionNumericUpDown">
+    <Setter Property="Increment" Value="1" />
+    <Setter Property="Margin" Value="2" />
+    <Setter Property="Maximum" Value="999" />
+    <Setter Property="Minimum" Value="0" />
+  </Style>
+  
+  <Style Selector="TextBox.EditorTextBox">
+    <Setter Property="Margin" Value="2" />
+  </Style>
+  
+</Styles>

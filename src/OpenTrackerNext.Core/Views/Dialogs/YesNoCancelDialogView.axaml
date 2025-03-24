@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Core.ViewModels.Dialogs"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
+             x:Class="OpenTrackerNext.Core.Views.Dialogs.YesNoCancelDialogView"
+             x:DataType="vm:YesNoCancelDialogViewModel" x:CompileBindings="True">
+  <UserControl.Styles>
+    <StyleInclude Source="DialogStyles.axaml" />
+  </UserControl.Styles>
+  
+  <Grid Classes="DialogGrid" ColumnDefinitions="Auto *" RowDefinitions="* 15 Auto">
+    <i:Icon x:Name="Icon" Classes="DialogIcon" Grid.Column="0" Grid.Row="0" Value="mdi-help-circle" />
+    
+    <Grid Grid.Column="1" Grid.Row="0" RowDefinitions="Auto *">
+      <TextBox x:Name="TitleTextBox" Classes="DialogTitleTextBox DialogTextBox" Grid.Row="0" Text="Title" />
+      <TextBox x:Name="MessageTextBox" Classes="DialogTextBox" Grid.Row="1" Text="Message" />
+    </Grid>
+    
+    <StackPanel Classes="DialogButtonsStackPanel" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+      <Button x:Name="YesButton" Classes="DialogButton" Content="Yes" />
+      <Button x:Name="NoButton" Classes="DialogButton" Content="No" />
+      <Button x:Name="CancelButton" Classes="DialogButton" Content="Cancel" />
+    </StackPanel>
+  </Grid>
+</UserControl>

@@ -1,0 +1,91 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="https://github.com/projektanker/icons.avalonia">
+  <Style Selector="Button.DialogButton">
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="MinHeight" Value="24" />
+    <Setter Property="MinWidth" Value="75" />
+    <Setter Property="Padding" Value="3" />
+  </Style>
+  
+  <Style Selector="Expander.DialogExpander">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="Margin" Value="0 5" />
+  </Style>
+    
+  <Style Selector="Expander.DialogExpander /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Margin" Value="0" />
+  </Style>
+  
+  <Style Selector="Grid.DialogGrid">
+    <Setter Property="Margin" Value="15" />
+  </Style>
+  
+  <Style Selector="i|Icon.DialogIcon">
+    <Setter Property="FontSize" Value="38" />
+    <Setter Property="Margin" Value="0 10 15 0" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+  </Style>
+  
+  <Style Selector="Label.ErrorLabel">
+    <Setter Property="FontSize" Value="10" />
+    <Setter Property="Foreground" Value="{DynamicResource SystemErrorTextColor}" />
+    <Setter Property="Margin" Value="10 0" />
+  </Style>
+
+  <Style Selector="ListBox.DialogListBox">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+    
+  <Style Selector="ListBox.DialogListBox > ListBoxItem">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+  
+  <Style Selector="Panel.DialogListBoxPanel">
+    <Setter Property="Margin" Value="1" />
+  </Style>
+  
+  <Style Selector="StackPanel.DialogButtonsStackPanel">
+    <Setter Property="HorizontalAlignment" Value="Right" />
+    <Setter Property="Orientation" Value="Horizontal" />
+    <Setter Property="Spacing" Value="5" />
+  </Style>
+  
+  <Style Selector="TextBox.DialogInputTextBox">
+    <Setter Property="Margin" Value="10 0" />
+  </Style>
+
+  <Style Selector="TextBox.DialogTextBox">
+    <Setter Property="AcceptsReturn" Value="True" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="CaretBrush" Value="Transparent" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="TextWrapping" Value="WrapWithOverflow" />
+    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+  </Style>
+    
+  <Style Selector="TextBox.DialogTextBox:pointerover /template/ Border#border">
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+    
+  <Style Selector="TextBox.DialogTextBox:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+    
+  <Style Selector="TextBox.DialogTextBox:focus /template/ Border#border">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+    
+  <Style Selector="TextBox.DialogTextBox:focus /template/ Border#PART_BorderElement">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+    
+  <Style Selector="TextBox.DialogTitleTextBox">
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Margin" Value="0 0 0 10" />
+  </Style>
+</Styles>

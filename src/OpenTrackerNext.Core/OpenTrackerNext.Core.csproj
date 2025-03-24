@@ -17,6 +17,7 @@
     <PackageReference Include="Ardalis.SmartEnum.SystemTextJson" Version="8.1.0" />
     <PackageReference Include="Avalonia" Version="11.2.5" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.2.5" />
+    <PackageReference Include="DialogHost.Avalonia" Version="0.9.2" />
     <PackageReference Include="OneOf" Version="3.0.271" />
     <PackageReference Include="OneOf.SourceGenerator" Version="3.0.271" />
     <PackageReference Include="Projektanker.Icons.Avalonia.MaterialDesign" Version="9.6.1" />
@@ -39,6 +40,25 @@
     <ProjectReference Include="..\..\roslyn\OpenTrackerNext.Roslyn.SplatRegistration\OpenTrackerNext.Roslyn.SplatRegistration.csproj"
                       OutputItemType="Analyzer"
                       ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Dialogs\ExceptionDialogView.axaml.cs">
+      <DependentUpon>ExceptionDialogView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\TextBoxDialogView.axaml.cs">
+      <DependentUpon>TextBoxDialogView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\YesNoCancelDialogView.axaml.cs">
+      <DependentUpon>YesNoCancelDialogView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\YesNoDialogView.axaml.cs">
+      <DependentUpon>YesNoDialogView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

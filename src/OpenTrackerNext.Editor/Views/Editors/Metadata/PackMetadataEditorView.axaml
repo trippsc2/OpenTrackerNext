@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="OpenTrackerNext.Editor.Views.Editors.Metadata.PackMetadataEditorView">
+  <Grid ColumnDefinitions="Auto *" RowDefinitions="Auto Auto Auto" >
+    <Label Classes="EditorLabel" Grid.Row="0" Grid.Column="0" Content="Name:" />
+    <TextBox x:Name="NameTextBox" Classes="EditorTextBox" Grid.Row="0" Grid.Column="1" />
+    
+    <Label Classes="EditorLabel" Grid.Row="1" Grid.Column="0" Content="Author:" />
+    <TextBox x:Name="AuthorTextBox" Classes="EditorTextBox" Grid.Row="1" Grid.Column="1" />
+    
+    <Label Classes="EditorLabel" Grid.Row="2" Grid.Column="0" Content="Version:" />
+    <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="* * * *">
+      <NumericUpDown x:Name="MajorVersionNumericUpDown" Classes="EditorVersionNumericUpDown" Grid.Column="0" />
+      <NumericUpDown x:Name="MinorVersionNumericUpDown" Classes="EditorVersionNumericUpDown" Grid.Column="1" />
+      <NumericUpDown x:Name="BuildVersionNumericUpDown" Classes="EditorVersionNumericUpDown" Grid.Column="2" />
+      <NumericUpDown x:Name="RevisionVersionNumericUpDown" Classes="EditorVersionNumericUpDown" Grid.Column="3" />
+    </Grid>
+  </Grid>
+</UserControl>

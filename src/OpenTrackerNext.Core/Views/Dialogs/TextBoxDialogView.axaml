@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Core.ViewModels.Dialogs"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
+             x:Class="OpenTrackerNext.Core.Views.Dialogs.TextBoxDialogView"
+             x:DataType="vm:TextBoxDialogViewModel" x:CompileBindings="True">
+  <UserControl.Styles>
+    <StyleInclude Source="DialogStyles.axaml" />
+  </UserControl.Styles>
+  
+  <Grid Classes="DialogGrid" ColumnDefinitions="Auto *" RowDefinitions="* 15 Auto">
+    <i:Icon x:Name="DialogIcon" Classes="DialogIcon" Grid.Column="0" Grid.Row="0" Value="mdi-help-circle" />
+    
+    <Grid Grid.Column="1" Grid.Row="0" RowDefinitions="Auto Auto Auto Auto">
+      <TextBox x:Name="DialogTitleTextBox" Classes="DialogTextBox DialogTitleTextBox" Grid.Row="0" Text="Title" />
+      <TextBox x:Name="DialogMessageTextBox" Classes="DialogTextBox" Grid.Row="1" Text="Message" />
+      <TextBox x:Name="DialogInputTextBox" Classes="DialogInputTextBox" Grid.Row="2" Text="Input Text" />
+      <Label x:Name="ErrorLabel" Classes="ErrorLabel" Grid.Row="3" Content="Sample Error Text" />
+    </Grid>
+    
+    <StackPanel Classes="DialogButtonsStackPanel" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+      <Button x:Name="OkButton" Classes="DialogButton" Content="OK" />
+      <Button x:Name="CancelButton" Classes="DialogButton" Content="Cancel" />
+    </StackPanel>
+  </Grid>
+</UserControl>

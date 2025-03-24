@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:OpenTrackerNext.Core.ViewModels.Dialogs"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="300"
+             x:Class="OpenTrackerNext.Core.Views.Dialogs.ExceptionDialogView"
+             x:DataType="vm:ExceptionDialogViewModel" x:CompileBindings="True"
+             MaxHeight="350" MaxWidth="500">
+  <UserControl.Styles>
+    <StyleInclude Source="avares://OpenTrackerNext.Core/Views/Dialogs/DialogStyles.axaml" />
+  </UserControl.Styles>
+  
+  <Grid Classes="DialogGrid" ColumnDefinitions="Auto *" RowDefinitions="* 15 Auto Auto">
+    <i:Icon Classes="DialogIcon" Grid.Column="0" Grid.Row="0" Value="mdi-close-circle" />
+    
+    <Grid Grid.Column="1" Grid.Row="0" RowDefinitions="Auto * Auto">
+      <TextBox x:Name="TitleTextBox" Classes="DialogTextBox DialogTitleTextBox" Grid.Row="0" Text="Exception" />
+      <TextBox x:Name="MessageTextBox" Classes="DialogTextBox" Grid.Row="1" Text="Sample Exception Message" />
+    </Grid>
+    
+    <Expander x:Name="StackTraceExpander"
+              Grid.Column="0"
+              Grid.Row="2"
+              Grid.ColumnSpan="2"
+              Classes="DialogExpander"
+              Header="Details">
+      <ScrollViewer>
+        <TextBox x:Name="StackTraceTextBox" Classes="DialogTextBox" Text="This is a long stack trace" />
+      </ScrollViewer>
+    </Expander>
+    
+    <StackPanel Classes="DialogButtonsStackPanel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
+      <Button x:Name="OkButton" Classes="DialogButton" Content="OK" />
+    </StackPanel>
+  </Grid>
+</UserControl>

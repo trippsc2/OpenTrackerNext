@@ -3,7 +3,11 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="src/OpenTrackerNext.Core/Views/ExceptionDialogView.axaml" value="tests/unit/OpenTrackerNext.Core.UnitTests/OpenTrackerNext.Core.UnitTests.csproj" />
         <entry key="src/OpenTrackerNext.Editor/App.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="src/OpenTrackerNext.Editor/Views/Editors/EditorStyles.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="src/OpenTrackerNext.Editor/Views/Editors/Entities/EntityEditorView.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
+        <entry key="src/OpenTrackerNext.Editor/Views/Editors/Metadata/PackMetadataEditorView.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
         <entry key="src/OpenTrackerNext.Editor/Views/MainWindow.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
         <entry key="src/OpenTrackerNext.Editor/Views/Tools/ToolLayoutView.axaml" value="src/OpenTrackerNext.Editor/OpenTrackerNext.Editor.csproj" />
         <entry key="tests/unit/OpenTrackerNext.Core.UnitTests/App.axaml" value="tests/unit/OpenTrackerNext.Core.UnitTests/OpenTrackerNext.Core.UnitTests.csproj" />
